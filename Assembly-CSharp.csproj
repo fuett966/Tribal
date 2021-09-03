@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\BornState.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
+     <Compile Include="Assets\Scripts\DeadState.cs" />
      <Compile Include="Assets\Scripts\EatState.cs" />
      <Compile Include="Assets\Scripts\EnergyRefillState.cs" />
      <Compile Include="Assets\Scripts\FoodSpawner.cs" />
