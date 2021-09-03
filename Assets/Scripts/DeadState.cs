@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 [CreateAssetMenu]
 public class DeadState : State
 {
@@ -19,6 +19,6 @@ public class DeadState : State
     }
     public void Die()
     {
-        Destroy(Character.GetComponent<Character>().gameObject);
+        
     }
 }
