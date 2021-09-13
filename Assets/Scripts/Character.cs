@@ -12,18 +12,21 @@ public class Character : MonoBehaviour
     public State EatState;
     public State EnergyState;
     public State RandomMoveState;
-
+    [HideInInspector]public Transform heroTransform;
     // public Animator Animator;
 
     [Header("Actual state")]
     public State CurrentState;
-
-    float eatEndTime = 25f;
-    float energyEndTime = 85f;
+    [Header("Hunger rate")]
+    public float eatEndTime = 30f;
+    [Header("Fatigue rate")]
+    public float energyEndTime = 85f;
 
     void Start()
     {
+        heroTransform = GetComponent<Transform>();
         SetState(StartState);
+
     }
 
     void Update()
@@ -37,10 +40,22 @@ public class Character : MonoBehaviour
         }
         else
         {
-            if (Eat <= -1){Destroy(this.gameObject);}
-            else if (Eat <= 0.5f){SetState(EatState);}
-            else if (Energy <= 0.4f){SetState(EnergyState);}
-            else{SetState(RandomMoveState);}
+            if (Eat <= -1)
+            {
+                Destroy(this.gameObject);
+            }
+            else if (Eat <= 0.5f)
+            {
+                SetState(EatState);
+            }
+            else if (Energy <= 0.4f)
+            {
+                SetState(EnergyState);
+            }
+            else
+            {
+                SetState(RandomMoveState);
+            }
         }
     }
     public void SetState (State state)

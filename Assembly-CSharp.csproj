@@ -36,14 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BornState.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\DeadState.cs" />
      <Compile Include="Assets\Scripts\EatState.cs" />
      <Compile Include="Assets\Scripts\EnergyRefillState.cs" />
      <Compile Include="Assets\Scripts\FoodSpawner.cs" />
      <Compile Include="Assets\Scripts\RandomMoveState.cs" />
+     <Compile Include="Assets\Scripts\ReproductionState.cs" />
      <Compile Include="Assets\Scripts\State.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

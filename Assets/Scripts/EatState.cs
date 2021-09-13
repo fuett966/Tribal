@@ -4,7 +4,9 @@ using UnityEngine;
 [CreateAssetMenu]
 public class EatState : State
 {
+    public GameObject [] foodList ;
     public float RestoresEat = 0.6f;
+    public float EatDistance = 1f;
     public State NoApplesState;
 
     Transform targetApple;
@@ -18,7 +20,18 @@ public class EatState : State
         }
         else
         {
-            targetApple = GameObject.FindGameObjectWithTag("Apple").transform;
+            foodList = GameObject.FindGameObjectsWithTag("Apple");
+            float minRange = Vector3.Distance(Character.heroTransform.position, foodList[0].transform.position);
+            targetApple = foodList[0].transform;
+            for (int i = 1;i < foodList.Length;i++)
+            {
+                if (minRange > Vector3.Distance(Character.heroTransform.position, foodList[i].transform.position))
+                {
+                    minRange = Vector3.Distance(Character.heroTransform.position, foodList[i].transform.position);
+                    targetApple = foodList[i].transform;
+                }
+            }
+            foodList = null;
         }
     }
 
@@ -29,20 +42,34 @@ public class EatState : State
             return;
         }
         MoveToApple();
+        
+        
     }
     void MoveToApple()
     {
-        var distance = (targetApple.position - Character.transform.position).magnitude;
+        try
+        {
+            var distance = (targetApple.position - Character.transform.position).magnitude;
 
-        if (distance >1f)
+            if (distance >EatDistance)
+            {
+                Character.MoveTo(targetApple.position);
+            }
+            else
+            {
+                EatFood();
+            }
+            }
+        catch
         {
-            Character.MoveTo(targetApple.position);
+            Character.SetState(NoApplesState);
         }
-        else
-        {
-            Destroy(targetApple.gameObject);
-            Character.Eat += RestoresEat;
-            IsFinished = true;
-        }
+    }
+
+    void EatFood()
+    {
+        Destroy(targetApple.gameObject);
+        Character.Eat += RestoresEat;
+        IsFinished = true;
     }
 }
