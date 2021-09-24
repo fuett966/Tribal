@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\EatState.cs" />
      <Compile Include="Assets\Scripts\EnergyRefillState.cs" />
      <Compile Include="Assets\Scripts\FoodSpawner.cs" />
+     <Compile Include="Assets\Scripts\MenegerScript.cs" />
      <Compile Include="Assets\Scripts\RandomMoveState.cs" />
      <Compile Include="Assets\Scripts\ReproductionState.cs" />
      <Compile Include="Assets\Scripts\State.cs" />

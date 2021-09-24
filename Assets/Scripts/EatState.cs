@@ -9,18 +9,18 @@ public class EatState : State
     public float EatDistance = 1f;
     public State NoApplesState;
 
-    Transform targetApple;
+    Transform targetApple;//create monster ability to eat hero
 
     public override void Init()
     {
-        if (!GameObject.FindGameObjectWithTag("Apple"))
+        if (!GameObject.FindGameObjectWithTag("Food"))
         {
             Character.SetState(NoApplesState);
             return;
         }
         else
         {
-            foodList = GameObject.FindGameObjectsWithTag("Apple");
+            foodList = GameObject.FindGameObjectsWithTag("Food");
             float minRange = Vector3.Distance(Character.heroTransform.position, foodList[0].transform.position);
             targetApple = foodList[0].transform;
             for (int i = 1;i < foodList.Length;i++)

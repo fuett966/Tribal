@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Apple
   - Bed
+  - MushrumBed
+  - MonsterBed
+  - Food
+  - Hero
   layers:
   - Default
   - TransparentFX
