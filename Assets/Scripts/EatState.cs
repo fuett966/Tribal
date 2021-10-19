@@ -68,6 +68,7 @@ public class EatState : State
 
     void EatFood()
     {
+        GameEvents.current.FoodWasEat();
         Destroy(targetApple.gameObject);
         Character.Eat += RestoresEat;
         IsFinished = true;

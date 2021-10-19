@@ -42,6 +42,7 @@ public class Character : MonoBehaviour
         {
             if (Eat <= -1)
             {
+                GameEvents.current.HeroDied();
                 Destroy(this.gameObject);
             }
             else if (Eat <= 0.5f)

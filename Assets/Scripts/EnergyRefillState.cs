@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnergyRefillState : State
 {
     Transform targetBed;
-
     Vector3 lastCharPos;
 
     bool isSleepStarted;
@@ -37,7 +36,8 @@ public class EnergyRefillState : State
         }
     }
 
-    public override void Run(){
+    public override void Run()
+    {
         if (IsFinished)
         {
             return;
