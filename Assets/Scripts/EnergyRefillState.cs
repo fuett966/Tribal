@@ -4,11 +4,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class EnergyRefillState : State
 {
-    Transform targetBed;
-    Vector3 lastCharPos;
-
-    bool isSleepStarted;
-    float sleepTimeLeft = 7f;
+    private Transform targetBed;
+    private Vector3 lastCharPos;
+    private bool isSleepStarted;
+    public float sleepTime = 7f;
     public string bedTag = "Bed";
     public float energyRefill = 1f;
     [HideInInspector]public GameObject [] bedList ;
@@ -51,6 +50,7 @@ public class EnergyRefillState : State
             DoSleep();
         }
     }
+
     void MoveToBed()
     {
         if ((targetBed.position - Character.transform.position).magnitude > 1f)
@@ -64,11 +64,11 @@ public class EnergyRefillState : State
             isSleepStarted = true;
         }
     }
+    
     void DoSleep()
     {
-        sleepTimeLeft -= Time.deltaTime;
-        
-        if(sleepTimeLeft>0)
+        sleepTime -= Time.deltaTime; 
+        if(sleepTime>0)
         {
             return;
         }

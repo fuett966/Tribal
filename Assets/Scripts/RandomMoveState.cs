@@ -16,7 +16,8 @@ public class RandomMoveState : State
     }
     public override void Run()
     {
-        if ((randomPosition - Character.transform.position).magnitude>0.2f)
+        Debug.Log((randomPosition - Character.transform.position).magnitude);
+        if ((randomPosition - Character.transform.position).magnitude>0.3f)
         {
             Character.MoveTo(randomPosition);
         }

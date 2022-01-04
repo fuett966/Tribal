@@ -5,7 +5,6 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
     [HideInInspector]public float count = 0f;
-    // Start is called before the first frame update
     void Start()
     {
         count=0f;

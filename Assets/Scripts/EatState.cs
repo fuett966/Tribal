@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 [CreateAssetMenu]
 public class EatState : State
 {
-    public GameObject [] foodList ;
+    [HideInInspector]public GameObject [] foodList ;
     public float RestoresEat = 0.6f;
     public float EatDistance = 1f;
-    public State NoApplesState;
-
-    Transform targetApple;//create monster ability to eat hero
+    [HideInInspector]public State NoApplesState;
+    [HideInInspector]Transform targetApple;
 
     public override void Init()
     {
@@ -41,9 +38,7 @@ public class EatState : State
         {
             return;
         }
-        MoveToApple();
-        
-        
+        MoveToApple(); 
     }
     void MoveToApple()
     {
@@ -59,7 +54,7 @@ public class EatState : State
             {
                 EatFood();
             }
-            }
+        }
         catch
         {
             Character.SetState(NoApplesState);

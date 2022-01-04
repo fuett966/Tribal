@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class State : ScriptableObject
-{
-    // gameplay parametrs
+{ 
     public bool IsFinished {get ; protected set; }
     [HideInInspector]public Character Character;
 

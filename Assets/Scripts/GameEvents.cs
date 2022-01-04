@@ -4,14 +4,13 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
-
     private void Awake()
     {
         current = this;
     }
     public event Action onFoodWasEat;
     public event Action onHeroDied;
-    public void FoodWasEat()//EatState , Counter
+    public void FoodWasEat()
     {
         if(onFoodWasEat != null)
         {

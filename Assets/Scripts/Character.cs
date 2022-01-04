@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Character : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class Character : MonoBehaviour
     public State EatState;
     public State EnergyState;
     public State RandomMoveState;
-    [HideInInspector]public Transform heroTransform;
+    [HideInInspector] public Transform heroTransform;
     // public Animator Animator;
 
     [Header("Actual state")]
@@ -21,17 +23,24 @@ public class Character : MonoBehaviour
     public float eatEndTime = 30f;
     [Header("Fatigue rate")]
     public float energyEndTime = 85f;
+    private NavMeshAgent agent;
+    [Header("Food limit for death")]
+    public float FoodDeathLimit = -1f;
+    [Header("Food limit for state")]
+    public float FoodLimit = 0.5f;
+    [Header("Energy limit for state")]
+    public float EnergyLimit = 0.4f;
 
     void Start()
     {
         heroTransform = GetComponent<Transform>();
         SetState(StartState);
-
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        Eat -= Time.deltaTime/eatEndTime;
+        Eat -= Time.deltaTime / eatEndTime;
         Energy -= Time.deltaTime / energyEndTime;
 
         if (!CurrentState.IsFinished)
@@ -40,37 +49,40 @@ public class Character : MonoBehaviour
         }
         else
         {
-            if (Eat <= -1)
-            {
-                GameEvents.current.HeroDied();
-                Destroy(this.gameObject);
-            }
-            else if (Eat <= 0.5f)
-            {
-                SetState(EatState);
-            }
-            else if (Energy <= 0.4f)
-            {
-                SetState(EnergyState);
-            }
-            else
-            {
-                SetState(RandomMoveState);
-            }
+            ChoiseState();
         }
     }
-    public void SetState (State state)
+
+    public void SetState(State state)
     {
         CurrentState = Instantiate(state);
         CurrentState.Character = this;
         CurrentState.Init();
     }
+
     public void MoveTo(Vector3 position)
     {
-        position.y = transform.position.y;
+        agent.SetDestination(position);
+    }
 
-        transform.position = Vector3.MoveTowards(current: transform.position ,target: position ,Time.deltaTime);
-        transform.rotation = Quaternion.RotateTowards(from: transform.rotation ,to: Quaternion.LookRotation(position - transform.position),maxDegreesDelta:Time.deltaTime *120f );
-
+    public void ChoiseState()
+    {
+        if (Eat <= FoodDeathLimit)
+        {
+            GameEvents.current.HeroDied();
+            Destroy(this.gameObject);
+        }
+        else if (Eat <= FoodLimit)
+        {
+            SetState(EatState);
+        }
+        else if (Energy <= EnergyLimit)
+        {
+            SetState(EnergyState);
+        }
+        else
+        {
+            SetState(RandomMoveState);
+        }
     }
 }
