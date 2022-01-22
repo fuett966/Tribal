@@ -11,7 +11,7 @@ public class FoodSpawner : MonoBehaviour
         if (timer > waitTime)
         {
             timer = timer - waitTime;
-            Instantiate(Food, transform.position + new Vector3(Random.Range(-2f,2f),3,Random.Range(-2f,2f)), transform.rotation);
+            Instantiate(Food, transform.position + new Vector3(Random.Range(-2f,2f),4,Random.Range(-2f,2f)), transform.rotation);
         }
     }
 }

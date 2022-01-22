@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +11,12 @@ public class RandomMoveState : State
 
     public override void Init()
     {
-        var randomed = new Vector3(x:Random.Range(-MaxDistance,MaxDistance), y:0f, z:Random.Range(-MaxDistance,MaxDistance));
+        var randomed = new Vector3(x:Random.Range(-MaxDistance,MaxDistance), Character.transform.position.y/2, z:Random.Range(-MaxDistance,MaxDistance));
         randomPosition = Character.transform.position + randomed;
     }
     public override void Run()
     {
-        Debug.Log((randomPosition - Character.transform.position).magnitude);
-        if ((randomPosition - Character.transform.position).magnitude>0.3f)
+        if ((randomPosition - Character.transform.position).magnitude>0.45f)
         {
             Character.MoveTo(randomPosition);
         }

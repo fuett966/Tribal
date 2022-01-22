@@ -647,6 +647,14 @@
       <Project>{ff8fc90c-2978-7193-f0e8-1ea6ff020d26}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{876c2875-def3-5c35-c55e-5a8ac01c40bf}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{4bf9a1cd-31e7-de82-c0c3-2bc0ee382491}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{d91a6e7a-9e65-5cb6-20a5-d23b025c22d3}</Project>
       <Name>UnityEditor.UI</Name>
@@ -658,14 +666,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{08b2ac2a-fe2c-05f7-e75d-233825b7d196}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{4bf9a1cd-31e7-de82-c0c3-2bc0ee382491}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{876c2875-def3-5c35-c55e-5a8ac01c40bf}</Project>
-      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
