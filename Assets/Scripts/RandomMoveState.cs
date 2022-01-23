@@ -1,28 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 [CreateAssetMenu]
 public class RandomMoveState : State
 {
     public float MaxDistance = 5f;
-
     Vector3 randomPosition;
+    NavMeshHit navMeshHit;
 
     public override void Init()
     {
-        var randomed = new Vector3(x:Random.Range(-MaxDistance,MaxDistance), Character.transform.position.y/2, z:Random.Range(-MaxDistance,MaxDistance));
-        randomPosition = Character.transform.position + randomed;
+        CreateRandomPoint();
     }
+
     public override void Run()
     {
-        if ((randomPosition - Character.transform.position).magnitude>0.45f)
+        if (IsFinished)
         {
-            Character.MoveTo(randomPosition);
+            return;
         }
         else
         {
-            IsFinished = true;
+            if ((randomPosition - Character.transform.position).magnitude > 0.55f)
+            {
+                Character.MoveTo(randomPosition);
+            }
+            else
+            {
+                IsFinished = true;
+            }
+        }
+    }
+
+    public void CreateRandomPoint()
+    {
+        bool getCorrectPoint = false;
+        while (!getCorrectPoint)
+        {
+            NavMesh.SamplePosition(Random.insideUnitSphere * MaxDistance + Character.transform.position, out navMeshHit, MaxDistance, NavMesh.AllAreas);
+            randomPosition = navMeshHit.position;
+            Character.agent.CalculatePath(randomPosition, Character.navMeshPath);
+            if (Character.navMeshPath.status == NavMeshPathStatus.PathComplete) { getCorrectPoint = true; }
         }
     }
 }

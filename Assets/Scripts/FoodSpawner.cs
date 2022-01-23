@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
-    public float waitTime = 30.0f;
+    public float waitTimeMin = 20.0f;
+    public float waitTimeMax = 50.0f;
+    [SerializeField]public float waitTime;
     private float timer = 0.0f;
     public GameObject Food;
+    public void Start()
+    {
+        waitTime = Random.Range(waitTimeMin,waitTimeMax);
+    }
     public void Update()
     {
         timer += Time.deltaTime;

@@ -496,6 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cbf9b4bd0723c40b0ec5d60a4bfc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTimeMin: 35
+  waitTimeMax: 70
   waitTime: 30
   Food: {fileID: 8158292032060214792, guid: 543ff7b19033fe64ab29172ef4b7dfe0, type: 3}
 --- !u!205 &7372885341900049570

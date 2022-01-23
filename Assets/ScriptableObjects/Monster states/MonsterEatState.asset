@@ -15,5 +15,5 @@ MonoBehaviour:
   Character: {fileID: 0}
   foodList: []
   RestoresEat: 0.6
-  EatDistance: 1
+  EatDistance: 2.35
   NoApplesState: {fileID: 11400000, guid: cfcbf97cbe1de614d955c60b1dd1c89c, type: 2}

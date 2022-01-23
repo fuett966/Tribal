@@ -46,7 +46,7 @@ public class EatState : State
         {
             var distance = (targetApple.position - Character.transform.position).magnitude;
 
-            if (distance >EatDistance)
+            if (distance > EatDistance)
             {
                 Character.MoveTo(targetApple.position);
             }
@@ -62,8 +62,7 @@ public class EatState : State
     }
 
     void EatFood()
-    {
-        GameEvents.current.FoodWasEat();
+    { 
         Destroy(targetApple.gameObject);
         Character.Eat += RestoresEat;
         IsFinished = true;
