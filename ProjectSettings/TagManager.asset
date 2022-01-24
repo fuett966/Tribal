@@ -9,6 +9,7 @@ TagManager:
   - MonsterBed
   - Food
   - Hero
+  - Meat
   layers:
   - Default
   - TransparentFX

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eat: 1
   Energy: 1
-  StartState: {fileID: 11400000, guid: 2e6cbd0a2e78d5c44bf6e8b2d6515393, type: 2}
+  StartState: {fileID: 11400000, guid: 9d4621ba833ad50469a0b5556b4e7ebd, type: 2}
   EatState: {fileID: 11400000, guid: 6755df0ac6b2ba84ba8aa8ba48c64b36, type: 2}
   EnergyState: {fileID: 11400000, guid: 2e6cbd0a2e78d5c44bf6e8b2d6515393, type: 2}
   RandomMoveState: {fileID: 11400000, guid: 9d4621ba833ad50469a0b5556b4e7ebd, type: 2}

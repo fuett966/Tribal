@@ -4,8 +4,10 @@ using UnityEngine.AI;
 public class RandomMoveState : State
 {
     public float MaxDistance = 5f;
+
     Vector3 randomPosition;
     NavMeshHit navMeshHit;
+
 
     public override void Init()
     {
@@ -33,13 +35,16 @@ public class RandomMoveState : State
 
     public void CreateRandomPoint()
     {
-        bool getCorrectPoint = false;
-        while (!getCorrectPoint)
+        NavMesh.SamplePosition(Random.insideUnitSphere * MaxDistance + Character.transform.position, out navMeshHit, MaxDistance, NavMesh.AllAreas);
+        randomPosition = navMeshHit.position + new Vector3(x: 0f, y: 0.5f, z: 0f);
+        // + new Vector3(x: 0f, y: 0.7f, z: 0f)
+        try
         {
-            NavMesh.SamplePosition(Random.insideUnitSphere * MaxDistance + Character.transform.position, out navMeshHit, MaxDistance, NavMesh.AllAreas);
-            randomPosition = navMeshHit.position;
             Character.agent.CalculatePath(randomPosition, Character.navMeshPath);
-            if (Character.navMeshPath.status == NavMeshPathStatus.PathComplete) { getCorrectPoint = true; }
+        }
+        catch
+        {
+            Character.ChoiceState();
         }
     }
 }

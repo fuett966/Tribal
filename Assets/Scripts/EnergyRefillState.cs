@@ -10,7 +10,7 @@ public class EnergyRefillState : State
     public float sleepTime = 7f;
     public string bedTag = "Bed";
     public float energyRefill = 1f;
-    [HideInInspector]public GameObject [] bedList ;
+    [HideInInspector] public GameObject[] bedList;
 
     public override void Init()
     {
@@ -23,7 +23,7 @@ public class EnergyRefillState : State
             bedList = GameObject.FindGameObjectsWithTag(bedTag);
             float minRange = Vector3.Distance(Character.heroTransform.position, bedList[0].transform.position);
             targetBed = bedList[0].transform;
-            for (int i = 1;i < bedList.Length;i++)
+            for (int i = 1; i < bedList.Length; i++)
             {
                 if (minRange > Vector3.Distance(Character.heroTransform.position, bedList[i].transform.position))
                 {
@@ -60,18 +60,20 @@ public class EnergyRefillState : State
         else
         {
             lastCharPos = Character.transform.position;
-            Character.transform.position = targetBed.position;
+            Character.GetComponent<Collider>().enabled = false;
+            // Character.transform.position = targetBed.position;
             isSleepStarted = true;
         }
     }
-    
+
     void DoSleep()
     {
-        sleepTime -= Time.deltaTime; 
-        if(sleepTime>0)
+        sleepTime -= Time.deltaTime;
+        if (sleepTime > 0)
         {
             return;
         }
+        Character.GetComponent<Collider>().enabled = true;
         Character.transform.position = lastCharPos;
         Character.Energy = energyRefill;
         IsFinished = true;

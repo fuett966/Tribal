@@ -1,44 +1,56 @@
 ﻿using UnityEngine;
+using System.Collections;
 [CreateAssetMenu]
 public class EatState : State
 {
-    [HideInInspector]public GameObject [] foodList ;
+    [HideInInspector] public GameObject[] foodList;
+    public string[] foodTagArray;
     public float RestoresEat = 0.6f;
     public float EatDistance = 1f;
-    [HideInInspector]public State NoApplesState;
-    [HideInInspector]Transform targetApple;
+    public float maxSearchDistance = 50f;
+    [HideInInspector] public State NoApplesState;
+    [HideInInspector] Transform targetApple;
+    float minRange;
 
     public override void Init()
     {
-        if (!GameObject.FindGameObjectWithTag("Food"))
+        for (int i = 0; i < foodTagArray.Length; i++)
         {
-            Character.SetState(NoApplesState);
-            return;
-        }
-        else
-        {
-            foodList = GameObject.FindGameObjectsWithTag("Food");
-            float minRange = Vector3.Distance(Character.heroTransform.position, foodList[0].transform.position);
-            targetApple = foodList[0].transform;
-            for (int i = 1;i < foodList.Length;i++)
+            Debug.Log(foodTagArray.Length);
+            if (!GameObject.FindGameObjectWithTag(foodTagArray[i]))
             {
-                if (minRange > Vector3.Distance(Character.heroTransform.position, foodList[i].transform.position))
-                {
-                    minRange = Vector3.Distance(Character.heroTransform.position, foodList[i].transform.position);
-                    targetApple = foodList[i].transform;
-                }
+
             }
-            foodList = null;
+            else
+            {
+                foodList = GameObject.FindGameObjectsWithTag(foodTagArray[i]);
+                if (targetApple == null)
+                {
+                    minRange = Vector3.Distance(Character.heroTransform.position, foodList[0].transform.position);
+                    targetApple = foodList[0].transform;
+                }
+
+                for (int j = 1; j < foodList.Length; j++)
+                {
+                    if (minRange > Vector3.Distance(Character.heroTransform.position, foodList[j].transform.position))
+                    {
+                        minRange = Vector3.Distance(Character.heroTransform.position, foodList[j].transform.position);
+                        targetApple = foodList[j].transform;
+                    }
+                }
+
+            }
         }
+        foodList = null;
     }
 
-    public override void Run ()
+    public override void Run()
     {
         if (IsFinished)
         {
             return;
         }
-        MoveToApple(); 
+        MoveToApple();
     }
     void MoveToApple()
     {
@@ -46,13 +58,27 @@ public class EatState : State
         {
             var distance = (targetApple.position - Character.transform.position).magnitude;
 
-            if (distance > EatDistance)
+            if (distance > EatDistance && distance < maxSearchDistance)
             {
-                Character.MoveTo(targetApple.position);
+                if (distance < maxSearchDistance)
+                {
+                    Character.MoveTo(targetApple.position);
+                }
+                else
+                {
+                    Character.SetState(NoApplesState);
+                }
             }
             else
             {
-                EatFood();
+                try
+                {
+                    EatFood();
+                }
+                catch
+                {
+                    Character.ChoiceState();
+                }
             }
         }
         catch
@@ -62,7 +88,7 @@ public class EatState : State
     }
 
     void EatFood()
-    { 
+    {
         Destroy(targetApple.gameObject);
         Character.Eat += RestoresEat;
         IsFinished = true;

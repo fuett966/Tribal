@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Character : MonoBehaviour
@@ -20,22 +21,22 @@ public class Character : MonoBehaviour
     public float eatEndTime = 30f;
     [Header("Fatigue rate")]
     public float energyEndTime = 85f;
-    
+
     [Header("Food limit for death")]
     public float FoodDeathLimit = -1f;
     [Header("Food limit for state")]
     public float FoodLimit = 0.5f;
     [Header("Energy limit for state")]
     public float EnergyLimit = 0.4f;
-    [HideInInspector]public NavMeshAgent agent;
-    [HideInInspector]public NavMeshPath navMeshPath;
+    [HideInInspector] public NavMeshAgent agent;
+    [HideInInspector] public NavMeshPath navMeshPath;
 
     void Start()
     {
         heroTransform = GetComponent<Transform>();
-        SetState(StartState);
         agent = GetComponent<NavMeshAgent>();
         navMeshPath = new NavMeshPath();
+        SetState(StartState);
     }
 
     void Update()
@@ -49,7 +50,7 @@ public class Character : MonoBehaviour
         }
         else
         {
-            ChoiseState();
+            ChoiceState();
         }
     }
 
@@ -62,15 +63,14 @@ public class Character : MonoBehaviour
 
     public void MoveTo(Vector3 position)
     {
-        Debug.Log(position);
+        Debug.DrawLine(transform.position, position);
         agent.SetDestination(position);
-        Debug.Log(agent.destination);
     }
 
-    public void ChoiseState()
+    public void ChoiceState()
     {
         if (Eat <= FoodDeathLimit)
-        { 
+        {
             Destroy(this.gameObject);
         }
         else if (Eat <= FoodLimit)
