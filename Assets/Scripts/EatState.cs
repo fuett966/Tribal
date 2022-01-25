@@ -16,7 +16,6 @@ public class EatState : State
     {
         for (int i = 0; i < foodTagArray.Length; i++)
         {
-            Debug.Log(foodTagArray.Length);
             if (!GameObject.FindGameObjectWithTag(foodTagArray[i]))
             {
 
@@ -58,7 +57,7 @@ public class EatState : State
         {
             var distance = (targetApple.position - Character.transform.position).magnitude;
 
-            if (distance > EatDistance && distance < maxSearchDistance)
+            if (distance > EatDistance)
             {
                 if (distance < maxSearchDistance)
                 {
