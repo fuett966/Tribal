@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
   bedTag: Bed
-  energyRefill: 1
+  energy: 100
+  energyLossRate: 1
+  sleepTime: 5
+  energyRefill: 100
+  EnergyLimitForState: 20
   bedList: []

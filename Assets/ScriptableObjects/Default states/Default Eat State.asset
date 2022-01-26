@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Default Eat State
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  foodList: []
   foodTagArray:
   - Meat
   - Food
-  RestoresEat: 1
-  EatDistance: 1
+  hunger: 100
+  hungerRate: 1
+  RestoresEat: 50
+  eatDistance: 1
   maxSearchDistance: 50
-  NoApplesState: {fileID: 11400000, guid: 9d4621ba833ad50469a0b5556b4e7ebd, type: 2}
+  FoodLimitForState: 30

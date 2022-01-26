@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MonsterRandomMoveState
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  MaxDistance: 7
+  MaxDistance: 10
+  completeDistance: 1

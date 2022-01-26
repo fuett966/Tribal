@@ -248,7 +248,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.876316
+      value: -59.46
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.371384
+      value: 22.81
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -539,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.371384
+      value: 16.120003
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -908,7 +908,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.770233
+      value: 18.518852
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 887
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -1179,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.120316
+      value: -71.703995
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -1408,7 +1408,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 56631e2d3f1d40e43898fd28cc74916b, type: 2}
-  m_EnableTreeColliders: 0
+  m_EnableTreeColliders: 1
 --- !u!218 &1542502672
 Terrain:
   m_ObjectHideFlags: 0
@@ -1688,7 +1688,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.840313
+      value: -71.423996
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
@@ -1767,7 +1767,7 @@ PrefabInstance:
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.110237
+      value: 30.858856
       objectReference: {fileID: 0}
     - target: {fileID: 6206780620050579903, guid: 2bff0b77e602d53408e7d5adce4fa633,
         type: 3}

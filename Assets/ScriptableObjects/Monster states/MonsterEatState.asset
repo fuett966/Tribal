@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: MonsterEatState
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  foodList: []
-  RestoresEat: 0.6
-  EatDistance: 2.35
-  NoApplesState: {fileID: 11400000, guid: cfcbf97cbe1de614d955c60b1dd1c89c, type: 2}
+  foodTagArray:
+  - Food
+  - Meat
+  - Hero
+  hunger: 300
+  hungerRate: 6
+  RestoresEat: 100
+  eatDistance: 2
+  maxSearchDistance: 25
+  FoodLimitForState: 150
