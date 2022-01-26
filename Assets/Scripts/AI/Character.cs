@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     public State StartState;
     public EatState EatState;
     public EnergyRefillState EnergyState;
-    public RandomMoveState RandomMoveState; 
+    public RandomMoveState RandomMoveState;
 
     [Header("Actual state")]
     public State CurrentState;
@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
 
     [Header("Food limit for death")]
     public float FoodDeathLimit = -10f;
-    
+
     [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public NavMeshPath navMeshPath;
 
@@ -42,9 +42,15 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        tempHunger -= Time.deltaTime * hungerRate;
-        tempEnergy -= Time.deltaTime * energyLossRate;
-
+        if (tempHunger > 0)
+        {
+            tempHunger -= Time.deltaTime * hungerRate;
+        }
+        if (tempEnergy > 0)
+        {
+            tempEnergy -= Time.deltaTime * energyLossRate;
+        }
+        
         if (!CurrentState.IsFinished)
         {
             CurrentState.Run();

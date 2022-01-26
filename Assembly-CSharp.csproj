@@ -619,6 +619,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{bcd633e1-68d2-cd13-301a-5077538cfdb0}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{dfcdcca0-db0a-4fb0-a825-f1e1819f988a}</Project>
       <Name>Unity.VSCode.Editor</Name>

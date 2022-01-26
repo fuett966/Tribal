@@ -26,18 +26,20 @@ public class EatState : State
     public override void Run()
     {
         // Debug.Log(targetFood);
-        if (targetFood == null && minRange > maxSearchDistance)
+        if (targetFood == null || minRange > maxSearchDistance)
         {
-            Character.SetState(NoFoodState);
             IsFinished = true;
-            Debug.Log("Bebra1");
+            Character.SetState(NoFoodState);
+            Debug.Log(this.Character.gameObject);
         }
         if (IsFinished)
         {
+            IsFinished = false;
             return;
         }
         else
         {
+            Debug.Log(targetFood);
             MoveToFood();
         }
     }
@@ -61,28 +63,21 @@ public class EatState : State
                     {
                         minRange = Vector3.Distance(Character.transform.position, gm.transform.position);
                         targetFood = gm.transform;
-                        // Debug.Log(minRange);
                     }
-                }
-
-                if (minRange >= maxSearchDistance)
-                {
-                    targetFood = null;
                 }
             }
         }
     }
     void MoveToFood()
     {
-        try
+        if (targetFood == null)
         {
-
-            // NavMesh.SamplePosition(GameObject.FindGameObjectWithTag("Food").transform.position * maxSearchDistance + Character.transform.position, out navMeshHit, maxSearchDistance, NavMesh.AllAreas);
-            // foodPosition = navMeshHit.position;
-            // Debug.Log(NavMesh.CalculatePath(Character.transform.position, navMeshHit.position, 0, Character.navMeshPath));
-            // Debug.Log(foodPosition);
-
-            var distance = (targetFood.position - Character.transform.position).magnitude;
+            Character.SetState(NoFoodState);
+            IsFinished = true;
+        }
+        else
+        {
+            float distance = (targetFood.position - Character.transform.position).magnitude;
 
             if (distance > eatDistance)
             {
@@ -90,28 +85,15 @@ public class EatState : State
             }
             else
             {
-                try
-                {
-                    EatFood();
-                }
-                catch
-                {
-                    Character.SetState(NoFoodState);
-                    Debug.Log("Bebra2");
-                }
+                EatFood();
             }
         }
-        catch
-        {
-            Character.SetState(NoFoodState);
-            Debug.Log("Bebra3");
-        }
     }
-
     void EatFood()
     {
         Destroy(targetFood.gameObject);
         Character.tempHunger += RestoresEat;
+        targetFood = null;
         IsFinished = true;
     }
 }

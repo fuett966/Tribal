@@ -16,7 +16,7 @@ MonoBehaviour:
   bedTag: MonsterBed
   energy: 150
   energyLossRate: 2
-  sleepTime: 10
+  sleepTime: 8
   energyRefill: 150
   EnergyLimitForState: 50
   bedList: []
