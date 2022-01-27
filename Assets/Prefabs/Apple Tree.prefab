@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1917037459943465785}
   - component: {fileID: 9025679555966972259}
   m_Layer: 11
-  m_Name: Sphere (4)
+  m_Name: Sphere (4)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 2951341029660361358}
   - component: {fileID: 2789897970574257344}
   m_Layer: 11
-  m_Name: Sphere (5)
+  m_Name: Sphere (5)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 8059834546823989296}
   - component: {fileID: 5781578780501701411}
   m_Layer: 11
-  m_Name: Sphere (6)
+  m_Name: Sphere (6)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 2122547492862667789}
   - component: {fileID: 5563957819406571545}
   m_Layer: 11
-  m_Name: Capsule
+  m_Name: trunkA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 6206780620050579903}
   - component: {fileID: 6206780620050579900}
   - component: {fileID: 7372885341900049570}
+  - component: {fileID: 6333832276514171319}
   m_Layer: 11
   m_Name: Apple Tree
   m_TagString: Untagged
@@ -509,13 +510,13 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6206780620050579902}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.24279988, y: 3.5799608, z: -0.17558491}
+  m_LocalReferencePoint: {x: -0.24279988, y: 2.8699608, z: -0.17558491}
   m_Size: 7.133892
-  m_FadeMode: 2
+  m_FadeMode: 0
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.19577438
+  - screenRelativeHeight: 0.108489074
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2122547492862667789}
@@ -528,18 +529,32 @@ LODGroup:
     - renderer: {fileID: 2951341029660361358}
     - renderer: {fileID: 8059834546823989296}
     - renderer: {fileID: 4985592350907165073}
-  - screenRelativeHeight: 0.01486551
+  - screenRelativeHeight: 0.058888104
     fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2122547492862667789}
-    - renderer: {fileID: 7256975535933051485}
-    - renderer: {fileID: 4985592350907165073}
-    - renderer: {fileID: 8978994365581071207}
-    - renderer: {fileID: 3110287608597081643}
-  - screenRelativeHeight: 0.006205462
+    renderers: []
+  - screenRelativeHeight: 0.010680096
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!95 &6333832276514171319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206780620050579902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2020c4d9bc65b54680eda86a28b28ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6969355262073011803
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +568,7 @@ GameObject:
   - component: {fileID: 3110287608597081643}
   - component: {fileID: 2501257939463332745}
   m_Layer: 11
-  m_Name: Sphere (2)
+  m_Name: Sphere (2)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,7 +663,7 @@ GameObject:
   - component: {fileID: 7256975535933051485}
   - component: {fileID: 7219966971606251946}
   m_Layer: 11
-  m_Name: Sphere
+  m_Name: SphereA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,7 +758,7 @@ GameObject:
   - component: {fileID: 4985592350907165073}
   - component: {fileID: 5687689768596407292}
   m_Layer: 0
-  m_Name: tree trunk
+  m_Name: tree trunkA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,7 +854,7 @@ GameObject:
   - component: {fileID: 8978994365581071207}
   - component: {fileID: 5328168858556406696}
   m_Layer: 11
-  m_Name: Sphere (1)
+  m_Name: Sphere (1)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,7 +949,7 @@ GameObject:
   - component: {fileID: 3266601646018598031}
   - component: {fileID: 431543147954005497}
   m_Layer: 11
-  m_Name: Capsule (2)
+  m_Name: Capsule (2)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1045,7 @@ GameObject:
   - component: {fileID: 9143801345947496489}
   - component: {fileID: 3959357094196717832}
   m_Layer: 11
-  m_Name: Capsule (1)
+  m_Name: Capsule (1)A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

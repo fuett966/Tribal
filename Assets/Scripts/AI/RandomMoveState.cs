@@ -3,7 +3,7 @@ using UnityEngine.AI;
 [CreateAssetMenu]
 public class RandomMoveState : State
 {
-    public float MaxDistance = 5f; 
+    public float MaxDistance = 5f;
     public float completeDistance = 0.55f;
 
     Vector3 randomPosition;
@@ -37,8 +37,12 @@ public class RandomMoveState : State
 
     public void CreateRandomPoint()
     {
-        NavMesh.SamplePosition(Random.insideUnitSphere * MaxDistance + Character.transform.position, out navMeshHit, MaxDistance, NavMesh.AllAreas);
-        randomPosition = navMeshHit.position + new Vector3(x: 0f, y: 0.5f, z: 0f);
-        // + new Vector3(x: 0f, y: 0.7f, z: 0f)
+        do
+        {
+            NavMesh.SamplePosition(Random.insideUnitSphere * MaxDistance + Character.transform.position, out navMeshHit, MaxDistance, NavMesh.AllAreas);
+            randomPosition = navMeshHit.position;
+            // + new Vector3(x: 0f, y: 0.5f, z: 0f)
+        }
+        while ((randomPosition - Character.transform.position).magnitude > MaxDistance);
     }
 }

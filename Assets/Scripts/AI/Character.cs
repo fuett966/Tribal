@@ -70,7 +70,7 @@ public class Character : MonoBehaviour
 
     public void MoveTo(Vector3 position)
     {
-        Debug.DrawLine(transform.position, position);
+        // Debug.DrawLine(transform.position, position);
         agent.SetDestination(position);
     }
 

@@ -25,21 +25,17 @@ public class EatState : State
 
     public override void Run()
     {
-        // Debug.Log(targetFood);
         if (targetFood == null || minRange > maxSearchDistance)
         {
             IsFinished = true;
             Character.SetState(NoFoodState);
-            Debug.Log(this.Character.gameObject);
         }
         if (IsFinished)
         {
-            IsFinished = false;
             return;
         }
         else
         {
-            Debug.Log(targetFood);
             MoveToFood();
         }
     }
@@ -73,6 +69,8 @@ public class EatState : State
         if (targetFood == null)
         {
             Character.SetState(NoFoodState);
+            Debug.Log(targetFood);
+            Debug.Log(this.Character.gameObject);
             IsFinished = true;
         }
         else
@@ -93,7 +91,6 @@ public class EatState : State
     {
         Destroy(targetFood.gameObject);
         Character.tempHunger += RestoresEat;
-        targetFood = null;
         IsFinished = true;
     }
 }
