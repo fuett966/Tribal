@@ -289,6 +289,9 @@
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/GitHub/Tribal/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>D:/GitHub/Tribal/Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/GitHub/Tribal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
@@ -665,6 +668,11 @@
       <Name>Unity.VSCode.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{5C0451EE-23FE-A069-F2A2-1BEC4679721E}</Project>
+      <Name>Unity.Burst</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{925DE816-E43F-FF76-2E42-056953616EC8}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -690,14 +698,19 @@
       <Name>Unity.TextMeshPro</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{57560E4B-3172-A55E-3E9B-22F756725E0D}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="NavMeshComponentsEditor.csproj">
       <Project>{75286C87-F3DE-355C-C55E-5A8AC01C40BF}</Project>
       <Name>NavMeshComponentsEditor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{CDA1F94B-E731-82DE-C0C3-2BC0EE382491}</Project>
-      <Name>NavMeshComponents</Name>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{0DC616C9-DFC2-6D27-CF75-98455D66B7E0}</Project>
+      <Name>Unity.Burst.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
@@ -710,24 +723,19 @@
       <Name>Unity.Rider.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="Unity.Animation.Rigging.Editor.csproj">
+      <Project>{7B8C1BDB-BEC0-FC87-5677-A61BF60882E4}</Project>
+      <Name>Unity.Animation.Rigging.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{2AACB208-2CFE-F705-E75D-233825B7D196}</Project>
       <Name>UnityEngine.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{5D646FCC-8699-591A-ACC3-47D5EA7FA865}</Project>
-      <Name>Unity.Mathematics</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{5C0451EE-23FE-A069-F2A2-1BEC4679721E}</Project>
-      <Name>Unity.Burst</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{57560E4B-3172-A55E-3E9B-22F756725E0D}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{CDA1F94B-E731-82DE-C0C3-2BC0EE382491}</Project>
+      <Name>NavMeshComponents</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.Animation.Rigging.csproj">
@@ -735,14 +743,69 @@
       <Name>Unity.Animation.Rigging</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="Unity.Animation.Rigging.Editor.csproj">
-      <Project>{7B8C1BDB-BEC0-FC87-5677-A61BF60882E4}</Project>
-      <Name>Unity.Animation.Rigging.Editor</Name>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{5D646FCC-8699-591A-ACC3-47D5EA7FA865}</Project>
+      <Name>Unity.Mathematics</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{0DC616C9-DFC2-6D27-CF75-98455D66B7E0}</Project>
-      <Name>Unity.Burst.Editor</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{FCA67A36-DF11-133E-8CF0-628C6B1E1679}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{AF881925-A7BA-2406-30DE-8020CF1ED458}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{1DB41B7D-1543-FE46-31EB-8D448F1C48CF}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{06857CDD-F140-AF59-02B1-86D67F7239F9}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{6FF7EEDF-D775-862C-9453-CE066F44A2C3}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{01F97F4C-CA98-F2F5-1C25-E31CBB2C7C2E}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{25D487BE-D900-8BC8-2296-1730D132C25D}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{1C60282D-55F8-9C59-B9E2-539C83345E5F}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{EA8EBDFD-9416-0637-CA51-DB09DCFFC319}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{FE78FC22-338F-6984-FF0E-A7BF091ACA79}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.csproj">
+      <Project>{7AB16BF3-8AAB-DA4A-E33D-99D197656907}</Project>
+      <Name>Unity.TerrainTools</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
+      <Project>{C11320A5-F63B-D00C-3039-6B5A14AB9878}</Project>
+      <Name>Unity.TerrainTools.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

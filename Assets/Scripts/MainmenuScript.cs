@@ -9,10 +9,12 @@ public class MainmenuScript : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
-    public void StartGame(){
-        SceneManager.LoadScene ("Main water scene");
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Main water scene");
     }
-    public void ExitGame(){
+    public void ExitGame()
+    {
         Application.Quit();
     }
 }
