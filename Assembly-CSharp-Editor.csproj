@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\IgniteCoders\Simple Water Shader\Info\Scripts\Editor\ReadmeEditor.cs" />
-     <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.169_manifest.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Versions\2020.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -277,21 +276,6 @@
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
         <HintPath>D:\GitHub\Tribal\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-        <HintPath>D:\GitHub\Tribal\Assets\ExternalDependencyManager\Editor\1.2.169\Google.PackageManagerResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-        <HintPath>D:\GitHub\Tribal\Assets\ExternalDependencyManager\Editor\1.2.169\Google.VersionHandlerImpl.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-        <HintPath>D:\GitHub\Tribal\Assets\ExternalDependencyManager\Editor\1.2.169\Google.IOSResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver">
-        <HintPath>D:\GitHub\Tribal\Assets\ExternalDependencyManager\Editor\1.2.169\Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandler">
-        <HintPath>D:\GitHub\Tribal\Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>D:\GitHub\Tribal\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

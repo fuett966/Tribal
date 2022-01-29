@@ -45,8 +45,6 @@
      <Compile Include="Assets\Scripts\FoodSpawner.cs" />
      <Compile Include="Assets\Scripts\Player\SC_FPSController.cs" />
      <Compile Include="Assets\Scripts\MainmenuScript.cs" />
-     <Compile Include="Assets\IgniteCoders\Simple Water Shader\Info\Scripts\Readme.cs" />
-     <Compile Include="Assets\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
      <None Include="Assets\Terrain Assets\ThirdPartyNotices.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Versions\2020.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
