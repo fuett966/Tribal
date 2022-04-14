@@ -13,10 +13,7 @@ public class Character : MonoBehaviour
     public RandomMoveState RandomMoveState;
 
     [Header("Actual state")]
-    public State CurrentState;
-
-
-
+    public State CurrentState; 
     private float hungerRate;
     private float energyLossRate;
 

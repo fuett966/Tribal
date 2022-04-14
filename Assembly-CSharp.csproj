@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\SpiderHeightScript.cs" />
      <Compile Include="Assets\Scripts\MainmenuScript.cs" />
      <None Include="Assets\Terrain Assets\ThirdPartyNotices.txt" />
+     <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Versions\2020.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
