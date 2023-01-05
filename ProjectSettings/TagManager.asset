@@ -11,6 +11,7 @@ TagManager:
   - Hero
   - Meat
   - Monster
+  - Enemy
   layers:
   - Default
   - TransparentFX

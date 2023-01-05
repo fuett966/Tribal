@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     public RandomMoveState RandomMoveState;
 
     [Header("Actual state")]
-    public State CurrentState; 
+    [SerializeField]public State CurrentState; 
     private float hungerRate;
     private float energyLossRate;
 
@@ -25,6 +25,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
+
         tempHunger = EatState.hunger;
         tempEnergy = EnergyState.energy;
 
