@@ -432,8 +432,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\UV\RadialShearNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Drawing\Controls\GradientControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Graphs\GraphDataUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Drawing\Inspector\PropertyDrawers\Vector2PropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Generation\Contexts\TargetFieldContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Drawing\Inspector\PropertyDrawers\Vector2PropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Math\Vector\DistanceNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Math\Derivative\DDXYNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Drawing\Views\PropertySheet.cs" />
@@ -445,8 +445,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\GuidEncoder.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Importers\ShaderSubGraphImporter.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Util\ValueUtilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Interfaces\Graph\IOnAssetEnabled.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Util\CreateSerializableGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Interfaces\Graph\IOnAssetEnabled.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Utility\KeywordNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Util\KeywordCollector.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Input\Basic\Vector3Node.cs" />
@@ -597,8 +597,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Implementation\NodeUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Graphs\Vector4MaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Math\Advanced\NegateNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Graphs\MaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Drawing\Controls\VectorControl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Graphs\MaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Nodes\Input\Basic\ConstantNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Generation\TargetResources\Structs.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.3.2\Editor\Data\Graphs\Texture2DArrayShaderProperty.cs" />

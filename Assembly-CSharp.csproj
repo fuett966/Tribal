@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\LegTarget.cs" />
     <Compile Include="Assets\Scripts\Player\SC_FPSController.cs" />
     <Compile Include="Assets\Scripts\SpiderHeightScript.cs" />
+    <Compile Include="Assets\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Terrain Assets\ThirdPartyNotices.txt" />
@@ -730,6 +731,14 @@
       <Project>{2AACB208-2CFE-F705-E75D-233825B7D196}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
+      <Project>{15E53E30-F3C5-5D41-8F15-3B741E18D7EF}</Project>
+      <Name>Unity.Polybrush.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.csproj">
+      <Project>{164F6522-B26D-3880-AF94-ACDE4D420C83}</Project>
+      <Name>Unity.Polybrush</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Animation.Rigging.csproj">
       <Project>{113C7F7C-6512-FCA9-836B-2A8B9A77341F}</Project>
       <Name>Unity.Animation.Rigging</Name>
@@ -797,14 +806,6 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{01F97F4C-CA98-F2F5-1C25-E31CBB2C7C2E}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
-      <Project>{15E53E30-F3C5-5D41-8F15-3B741E18D7EF}</Project>
-      <Name>Unity.Polybrush.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{164F6522-B26D-3880-AF94-ACDE4D420C83}</Project>
-      <Name>Unity.Polybrush</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
